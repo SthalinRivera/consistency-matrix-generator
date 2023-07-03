@@ -17,8 +17,6 @@ export default async function (req, res) {
 
   const variable1 = req.body.variable1 || '';
   const variable2 = req.body.variable2 || '';
-  const var1 = req.body.var1 || ''
-  const var2 = req.body.var2 || ''
   if (variable1.trim().length === 0) {
     res.status(400).json({
       error: {

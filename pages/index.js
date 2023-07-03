@@ -18,12 +18,12 @@ export default function Home() {
 
       });
       const data = await response.json();
-
+      console.log(data);
       if (response.status !== 200) {
         throw data.error || new Error(`Solicitud fallida con estado ${response.status}`);
       }
       setResult(data.result);
-    
+
       setLoadingVisible(loadingVisible);
 
       setDivVisible(!divVisible);
@@ -34,22 +34,22 @@ export default function Home() {
     }
   }
 
- 
+
 
 
   return (
     <div>
- 
-      <main class={styles.main}> 
-      
+
+      <main class={styles.main}>
+
         <div class="container text-center mt-3">
-              
-           
+
+
           <div class="row">
             <div class="col-12">
               <div class="card">
                 <div class="card-header bg-success">
-                  <h3 class="text-light">Generar matriz de consistencia </h3>
+                  <h3 class="text-light">Generar matriz de consistencia v2 </h3>
                 </div>
                 <div class="card-body">
                   <form onSubmit={onSubmit} >
@@ -75,7 +75,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-   
+
           <div>
             <div>
               {divVisible &&
@@ -94,8 +94,8 @@ export default function Home() {
               }
               {loadingVisible &&
                 <div>
-                 <Loading></Loading>
-                    <div><Head/></div>
+                  <Loading></Loading>
+                  <div><Head /></div>
                 </div>
               }
             </div>
