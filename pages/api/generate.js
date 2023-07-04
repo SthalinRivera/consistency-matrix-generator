@@ -42,8 +42,7 @@ export default async function (req, res) {
     // Considere ajustar la lógica de manejo de errores para su caso de uso
     if (error.response) {
       console.error(error.response.status, error.response.data);
-      res.status(error.response.status).json(error.response.data);
-    } else {
+      res.status(error.response.status).json(error.response.data); } else {
       console.error(`Error con la solicitud de API de OpenAI:: ${error.message}`);
       res.status(500).json({
         error: {
@@ -59,7 +58,7 @@ function generatePrompt(variable1, variable2) {
     variable1[0].toUpperCase() + variable1.slice(1).toLowerCase();
   const var02 =
     variable2[0].toUpperCase() + variable2.slice(1).toLowerCase();
-  return ` Generar una matriz de consistencia  tomando en cuenta "Problemas general y especificos", "definicion de la variable" , "objetivos general y especificos" , "hipotisis general y especificos", dimensiones, "variable indicadores" , si es cualitativa o cuantitativas y metodologia
+  return ` Generar un arbol de matriz de consistencia  tomando en cuenta "Problemas general y especificos", "definicion de la variable" , "objetivos general y especificos" , "hipotisis general y especificos", dimensiones, "variable indicadores" , si es cualitativa o cuantitativas y metodologia
  de las siguientes variables:
 ${var01} y ${var02}`;
 }
