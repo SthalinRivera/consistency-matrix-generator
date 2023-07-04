@@ -59,7 +59,7 @@ function generatePrompt(variable1, variable2) {
     variable1[0].toUpperCase() + variable1.slice(1).toLowerCase();
   const var02 =
     variable2[0].toUpperCase() + variable2.slice(1).toLowerCase();
-  return ` Generar un mapa de una  matriz de consistencia  tomando en cuenta "Problemas general y especificos", "definicion de la variable" , "objetivos general y especificos" , "hipotisis general y especificos", dimensiones, "variable indicadores" , si es cualitativa o cuantitativas y metodologia
+  return ` Generar una lista de una  matriz de consistencia  tomando en cuenta "Problemas general y especificos", "definicion de la variable" , "objetivos general y especificos" , "hipotisis general y especificos", dimensiones, "variable indicadores" , si es cualitativa o cuantitativas y metodologia
  de las siguientes variables:
 ${var01} y ${var02}`;
 }
